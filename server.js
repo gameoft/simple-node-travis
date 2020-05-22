@@ -1,4 +1,4 @@
-const ANIMAL = "cicciobello pippo"; //process.env.FAV_ANIMAL;
+const ANIMAL = process.env.FAV_ANIMAL;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
