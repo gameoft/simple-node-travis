@@ -16,11 +16,11 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-node-travis .
-  - docker tag simple-node-travis armadillo71/travis-env:latest
+  - docker tag simple-node-travis armadillo71/simple-node-travis:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push armadillo71/travis-env
+  - docker push armadillo71/simple-node-travis
 #deploy:
 #  provider: script
 #  script: bash docker_push
